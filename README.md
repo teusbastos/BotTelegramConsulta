@@ -1,69 +1,70 @@
-# 📦 ConsultaEstoqueBot
+# 📦 ConsultaEstoqueBot  
 
-Um **bot de Telegram** desenvolvido em Python para auxiliar na **gestao de estoque, pedidos e consultas de produtos**, integrado a um **banco Firebird SQL** e a rotinas de geracao de planilhas.
+Um **bot de Telegram** desenvolvido em Python para auxiliar na **gestão de estoque e pedidos**, integrado a um **banco de dados SQL** para manter as informações sempre atualizadas.  
 
-> ⚠️ Este repositorio foi preparado para portfolio.  
-> Tokens, credenciais, logs, planilhas reais e dados sensiveis nao estao incluidos.
-
----
-
-## 🚀 O que o bot faz
-
-- 🔍 Consulta produtos por **codigo de barras, referencia ou nome**
-- 🖼️ Reconhece **codigos de barras em imagens** enviadas pelo Telegram
-- 📊 Gera e consulta relatorios em **Excel**
-- 📝 Cria listas de pedidos por secao, nota fiscal ou marca
-- 📦 Apoia movimentacoes entre estoque e unidades
-- 🖨️ Gera listas para impressao de etiquetas
-- 🔒 Autentica usuarios e controla acesso ao bot
-- 🔔 Envia alertas automaticos para produtos com alta saida
-- 🗄️ Integra consultas com **Firebird SQL**
+> ⚠️ Este repositório contém apenas **demonstrações visuais** e descrição técnica.  
+> O código completo é privado. Caso queira ver detalhes técnicos, entre em contato comigo.  
 
 ---
 
-## 🛠️ Tecnologias
+## 🚀 O que o bot faz  
 
-- **Python 3**
-- **python-telegram-bot**
-- **Firebird SQL / fdb**
-- **openpyxl / pandas**
-- **Pillow / pyzbar**
-- **requests**
-- **python-dotenv**
-- **threading / regex / glob**
-
----
-
-## ⚙️ Como foi construido
-
-- Separacao entre comandos do bot, consultas ao banco e funcoes auxiliares
-- Uso de variaveis de ambiente para tokens, senhas e configuracoes locais
-- Processamento de imagens para leitura de codigo de barras
-- Geracao e leitura de planilhas para apoiar processos ja existentes
-- Rotinas agendadas com `JobQueue` para verificacoes automaticas
-- Persistencia auxiliar em arquivos locais para integracao operacional
+- 🔍 Consulta produtos por **código de barras, referência ou nome**  
+- 🖼️ Reconhece **códigos de barras em imagens** enviadas pelo Telegram  
+- 📊 Gera relatórios em **Excel** com base nos dados do banco  
+- 📝 Cria listas de pedidos por seção, nota fiscal ou marca  
+- 📦 Permite transferências entre locais *(Estoque ⇄ Boqueirão ⇄ Ocian ⇄ Pet)*  
+- 🖨️ Imprime etiquetas diretamente em impressoras térmicas  
+- 🔒 Autentica usuários e controla permissões  
+- 🔔 Envia **alertas automáticos** para reposição de produtos com venda rápida  
+- 🗄️ Integração direta com **Firebird SQL** para consultas de estoque e notas fiscais  
 
 ---
 
-## 🔐 Observação sobre execução
+## 📸 Demonstração  
+### 🔍 Consulta de produto por código digitado
+<img src="assets/consultacod.gif" width="400">  
 
-Este projeto depende de configurações privadas, como tokens, credenciais, banco de dados, arquivos locais ou integrações da operação real.
+### 🖼️ Consulta de produto foto
+<img src="assets/consultafoto.gif" width="400">  
 
-Por segurança, esses dados não foram incluídos no repositório. O objetivo aqui é demonstrar a arquitetura, as tecnologias utilizadas e as soluções implementadas.
-
----
-
-## ✨ Aprendizados do projeto
-
-- Criacao de fluxos conversacionais complexos no Telegram
-- Integracao entre Python, banco SQL e planilhas Excel
-- Automacao de processos reais de estoque
-- Tratamento de imagens para leitura de codigos de barras
-- Organizacao de configuracoes sensiveis com `.env`
+### 📦 Pedido automatizado  
+<img src="assets/consultapedido.gif" width="400">  
 
 ---
 
-## 👨‍💻 Autor
+## 🛠️ Tecnologias  
+
+- **Python 3**  
+- **python-telegram-bot** (interação no Telegram)  
+- **Firebird SQL** (consulta de dados do estoque e vendas)  
+- **openpyxl / pandas** (manipulação e análise de planilhas)  
+- **pyzbar + Pillow** (leitura de códigos de barras em imagens)  
+- **threading / glob / regex** (concorrência e processamento de arquivos)  
+
+---
+
+## ⚙️ Como foi construído  
+
+- Conexão ao **banco de dados Firebird** para obter informações de estoque, notas fiscais e vendas  
+- Geração de relatórios e pedidos usando **consultas SQL + Python**  
+- Estrutura modular (consultas, relatórios, comandos do bot)  
+- Persistência de dados auxiliares em arquivos (`.txt`, `.xlsx`) para integração com sistemas já existentes  
+- Rotinas agendadas com **JobQueue** (ex.: checar marcas com alta saída diariamente)  
+
+---
+
+## ✨ Aprendizados do Projeto  
+
+- Integração entre **Python e Firebird SQL** para automação de consultas  
+- Construção de fluxos complexos de interação no Telegram  
+- Manipulação de **Excel** e geração de relatórios automáticos  
+- Criação de automações que reduzem esforço manual no controle de estoque  
+- Boas práticas de autenticação, logs e organização de dados  
+
+---
+
+## 👨‍💻 Autor  
 
 Desenvolvido por **Mateus Bastos**  
 🔗 [LinkedIn](https://www.linkedin.com/in/mateus-bastos-825572139/) | [GitHub](https://github.com/teusbastos)
