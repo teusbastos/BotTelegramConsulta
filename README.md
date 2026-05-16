@@ -2,9 +2,6 @@
 
 Um **bot de Telegram** desenvolvido em Python para auxiliar na **gestão de estoque e pedidos**, integrado a um **banco de dados SQL** para manter as informações sempre atualizadas.  
 
-> ⚠️ Este repositório contém apenas **demonstrações visuais** e descrição técnica.  
-> O código completo é privado. Caso queira ver detalhes técnicos, entre em contato comigo.  
-
 ---
 
 ## 🚀 O que o bot faz  
